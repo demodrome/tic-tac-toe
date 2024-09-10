@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #293136;
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.btn {
+  background-color: rgb(73, 196, 196);
+  border: none;
+  border-bottom: 5px solid rgb(51, 143, 143);
+  border-radius: 30px;
+  color: #FFF;
+  display: block;
+  font-size: 2rem;
+  height: 60px;
+  letter-spacing: 2px;
+  width: 100%;
+}
