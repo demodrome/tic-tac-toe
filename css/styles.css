@@ -81,3 +81,60 @@ input {
 .btn:active {
   background-color: rgb(62, 172, 172);
 }
+
+.game {
+  align-items: center;
+  display: flex;
+  gap: 5rem;
+}
+
+.row {
+  display: flex;
+}
+
+.row:not(:last-of-type) {
+  border-bottom: 2px solid rgb(73, 196, 196);
+}
+
+.tile {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: 2rem;
+  height: 75px;
+  justify-content: center;
+  width: 75px;
+}
+
+.tile:not(:last-of-type) {
+  border-right: 2px solid rgb(73, 196, 196);
+}
+
+.tile:hover {
+  background-color: #232a2e;
+}
+
+.player {
+  align-items: center;
+  color: rgb(73, 196, 196);
+  display: flex;
+  flex-direction: column;
+  font-size: 2.5rem;
+}
+
+.player--active {
+  color: rgb(154, 206, 206);
+}
+
+.player--active::before {
+  content: "> ";
+}
+
+.player__score {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 200;
+}
