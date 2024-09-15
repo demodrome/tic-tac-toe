@@ -32,13 +32,25 @@ const board = (function () {
     if (!marker) {
       throw new Error('No marker found.');
     }
-    
+
     board[x][y] = marker;
+  }
+
+  /**
+   * Reset the board to its initial state
+   */
+  function reset() {
+    for (let i = 0; i < board.length; i++) {
+      for (let j = 0; j < board[i].length; j++) {
+        board[i][j] = '';
+      }
+    }
   }
 
   return {
     getBoard,
-    mark
+    mark,
+    reset
   }
 })();
 
