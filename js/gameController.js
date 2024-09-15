@@ -13,17 +13,31 @@ function gameController(playerOneName, playerTwoName) {
   // Set up the game components
   const playerOne = new Player(playerOneName, 'X');
   const playerTwo = new Player(playerTwoName, 'O');
+  let activePlayer = playerOne;
   const view = gameView(
     document.querySelector('.game-container'),
     playerOne.getName(),
     playerTwo.getName()
   );
-
+  
   /**
    * Starts the game
    */
   function startGame() {
-  
+    view.setup();
+    const gameBoard = document.querySelector('.board');
+
+    gameBoard.addEventListener('click', e => {
+      const markPositionX = e.target.getAttribute('data-x');
+      const markPositionY = e.target.getAttribute('data-y');
+      const activePlayerMarker = activePlayer.getMarker();
+
+      board.mark(markPositionX, markPositionY, activePlayerMarker);
+      view.update(board.getBoard());
+
+      // Switch the active player
+      activePlayer === playerOne ? activePlayer = playerTwo : activePlayer = playerOne;
+    });
   }
 
   return {
