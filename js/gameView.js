@@ -73,7 +73,7 @@ function gameView(root, playerOneName, playerTwoName) {
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < 3; j++) {
         const tile = document.querySelector(`[data-x="${j}"][data-y="${i}"]`);
-        tile.textContent = board[i][j];
+        tile.textContent = board[j][i];
       }
     }
   }
