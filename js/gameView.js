@@ -39,8 +39,8 @@ function gameView(root, playerOneName, playerTwoName) {
       for (let j = 0; j < 3; j++) {
         const tile = document.createElement('button');
         tile.classList.add('tile');
-        tile.setAttribute('data-x', j);
-        tile.setAttribute('data-y', i);
+        tile.setAttribute('data-x', i);
+        tile.setAttribute('data-y', j);
         tile.textContent = '';
         row.appendChild(tile);
       }
