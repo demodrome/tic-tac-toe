@@ -65,8 +65,22 @@ function gameView(root, playerOneName, playerTwoName) {
     root.appendChild(container);
   }
 
+  /**
+   * Update the board interface
+   * @param {Array} board The game board
+   */
+  function update(board) {
+    for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
+        const tile = document.querySelector(`[data-x="${j}"][data-y="${i}"]`);
+        tile.textContent = board[i][j];
+      }
+    }
+  }
+
   return {
-    setup
+    setup,
+    update
   }
 }
 
