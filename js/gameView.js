@@ -19,6 +19,7 @@ function gameView(root, playerOneName, playerTwoName) {
     const playerOneNameText = document.createElement('div');
     playerOneNameText.classList.add('player__name');
     playerOneNameText.classList.add('player--active');
+    playerOneNameText.setAttribute('data-player-one-name', '');
     playerOneNameText.textContent = playerOneName;
     playerOneArea.appendChild(playerOneNameText);
 
@@ -54,6 +55,7 @@ function gameView(root, playerOneName, playerTwoName) {
 
     const playerTwoNameText = document.createElement('div');
     playerTwoNameText.classList.add('player__name');
+    playerTwoNameText.setAttribute('data-player-two-name', '');
     playerTwoNameText.textContent = playerTwoName;
     playerTwoArea.appendChild(playerTwoNameText);
 
@@ -74,6 +76,8 @@ function gameView(root, playerOneName, playerTwoName) {
   function update(board, playerOneScore, playerTwoScore) {
     document.querySelector('[data-player-one-score]').textContent = playerOneScore;
     document.querySelector('[data-player-two-score]').textContent = playerTwoScore;
+    document.querySelector('[data-player-one-name]').classList.toggle('player--active');
+    document.querySelector('[data-player-two-name]').classList.toggle('player--active');
 
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < 3; j++) {
