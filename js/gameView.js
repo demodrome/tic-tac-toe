@@ -24,6 +24,7 @@ function gameView(root, playerOneName, playerTwoName) {
 
     const playerOneScoreText = document.createElement('div');
     playerOneScoreText.classList.add('player__score');
+    playerOneScoreText.setAttribute('data-player-one-score', '');
     playerOneScoreText.textContent = '0';
     playerOneArea.appendChild(playerOneScoreText);
 
@@ -58,6 +59,7 @@ function gameView(root, playerOneName, playerTwoName) {
 
     const playerTwoScoreText = document.createElement('div');
     playerTwoScoreText.classList.add('player__score');
+    playerTwoScoreText.setAttribute('data-player-two-score', '');
     playerTwoScoreText.textContent = '0';
     playerTwoArea.appendChild(playerTwoScoreText);
 
@@ -69,7 +71,10 @@ function gameView(root, playerOneName, playerTwoName) {
    * Update the board interface
    * @param {Array} board The game board
    */
-  function update(board) {
+  function update(board, playerOneScore, playerTwoScore) {
+    document.querySelector('[data-player-one-score]').textContent = playerOneScore;
+    document.querySelector('[data-player-two-score]').textContent = playerTwoScore;
+
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < 3; j++) {
         const tile = document.querySelector(`[data-x="${j}"][data-y="${i}"]`);

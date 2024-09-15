@@ -33,7 +33,7 @@ function gameController(playerOneName, playerTwoName) {
       const activePlayerMarker = activePlayer.getMarker();
 
       board.mark(markPositionX, markPositionY, activePlayerMarker);
-      view.update(board.getBoard());
+      view.update(board.getBoard(), playerOne.getScore(), playerTwo.getScore());
 
       if (!checkForWin()) {
         // Switch the active player
@@ -41,8 +41,8 @@ function gameController(playerOneName, playerTwoName) {
       } else {
         activePlayer.addScore();
         board.reset();
-        view.update(board.getBoard());
-        console.log(`${activePlayer.getName()} : ${activePlayer.getScore()}`);
+        view.update(board.getBoard(), playerOne.getScore(), playerTwo.getScore());
+        activePlayer = playerOne;
       }
     });
   }
