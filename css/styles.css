@@ -100,7 +100,7 @@ input {
   align-items: center;
   background-color: transparent;
   border: none;
-  color: #fff;
+  color: rgb(62, 172, 172);
   cursor: pointer;
   display: flex;
   font-size: 2rem;
@@ -125,14 +125,8 @@ input {
   font-size: 2.5rem;
 }
 
-.player--active {
-  color: rgb(154, 206, 206);
-  border: 3px solid greenyellow;
-}
-
 .player__name {
-  background-color: rgb(73, 196, 196);
-  border-radius: 10px;
+  border-radius: 50px;
   color: #FFF;
   letter-spacing: 2px;
   margin-bottom: 15px;
@@ -141,9 +135,26 @@ input {
   text-align: center;
 }
 
+[data-player-one-name] {
+  background-color: rgb(73, 196, 196);
+}
+
+[data-player-two-name] {
+  background-color: rgb(196, 73, 73);
+}
+
+[data-player-one-name],
+[data-player-two-name] {
+  opacity: 0.3;
+}
+
+.player--active {
+  opacity: 1;
+}
+
 .player__score {
   color: #fff;
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: 200;
 }
 

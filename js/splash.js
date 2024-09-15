@@ -15,7 +15,6 @@ function splash() {
   const playerOneInputField = document.createElement('input');
   playerOneInputField.classList.add('player-name');
   playerOneInputField.setAttribute('id', 'player-one-name');
-  playerOneInputField.setAttribute('data-player-one-name', '');
   playerOneInputField.setAttribute('autofocus', 'true');
   const playerTwoInputGroup = document.createElement('div');
   playerTwoInputGroup.classList.add('input-group');
