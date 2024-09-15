@@ -17,6 +17,14 @@ input {
   font: inherit;
 }
 
+.green {
+  color: rgb(73, 196, 196);
+}
+
+.red {
+  color: rgb(196, 73, 73);
+}
+
 .game-container {
   align-items: center;
   display: flex;
@@ -100,7 +108,6 @@ input {
   align-items: center;
   background-color: transparent;
   border: none;
-  color: rgb(62, 172, 172);
   cursor: pointer;
   display: flex;
   font-size: 2rem;

@@ -82,6 +82,15 @@ function gameView(root, playerOneName, playerTwoName) {
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < 3; j++) {
         const tile = document.querySelector(`[data-x="${j}"][data-y="${i}"]`);
+
+        if (board[j][i] === 'X') {
+          tile.classList.add('green');
+        }
+
+        if (board[j][i] === 'O') {
+          tile.classList.add('red');
+        }
+
         tile.textContent = board[j][i];
       }
     }
